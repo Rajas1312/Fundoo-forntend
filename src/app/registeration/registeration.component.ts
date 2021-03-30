@@ -1,5 +1,4 @@
 import { RegisterService } from './../register.service';
-import { PostsComponent } from './../posts/posts.component';
 import { Component, OnInit } from '@angular/core';
 import { Register } from './post.model';
 

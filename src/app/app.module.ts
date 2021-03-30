@@ -33,6 +33,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     FormsModule,
     AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

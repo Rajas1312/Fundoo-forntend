@@ -34,7 +34,9 @@
                     <form>
                         <mat-form-field style="width:26vw">
                             <mat-label>Username</mat-label>
-                            <input matInput placeholder="Username" name="email" [(ngModel)]="register.email">
+                            <input matInput placeholder="Username" name="email" [(ngModel)]="register.email"
+                                pattern="[A-Z]{1}[a-z]{2,}" autocomplete=" off">
+                            <mat-error>invalid email</mat-error>
                             <mat-hint>you can use letters,numbers & periods</mat-hint>
                         </mat-form-field>
                     </form>
