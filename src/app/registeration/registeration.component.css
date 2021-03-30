@@ -1,0 +1,77 @@
+
+
+.form-container{
+    margin: 50px; 
+    display: flex;
+    justify-content: center;
+}
+
+.image{
+ 
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0%;
+
+}
+
+.create-class{
+    margin-bottom:3%;
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+.title{
+    margin-bottom:3%;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+}
+.f{
+    color: rgb(31, 31, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+    
+}
+.u{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+}
+.n{
+    color: yellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+}
+.d{
+    color:blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+}
+.o{
+    color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+}
+.O{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+}
+
+.button{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.firstname{
+    display: flex;
+    flex-direction: row;
+}
+.image-text{
+    display: flex;
+    justify-content: center;
+}

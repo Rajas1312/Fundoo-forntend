@@ -1,0 +1,78 @@
+<div class="form-container" role="presentation">
+    <mat-card fxFlex="50">
+
+        <div class="title">
+            <span class="f">F</span>
+            <span class="u">U</span>
+            <span class="n">N</span>
+            <span class="d">D</span>
+            <span class="o">O</span>
+            <span class="O">O </span>
+            <span class="f">N</span>
+            <span class="u">O</span>
+            <span class="n">T</span>
+            <span class="d">E</span>
+            <span class="o">S</span>
+
+        </div>
+        <div class="create-class">Create your Fundoo Account</div>
+        <div class="card" role="presentation">
+            <div class="firstame-lastname">
+                <form>
+                    <form class="firstname">
+                        <mat-form-field>
+                            <mat-label>First Name</mat-label>
+                            <input id="fname" matInput placeholder="First Name" name="fname"
+                                [(ngModel)]="register.firstName">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Last Name</mat-label>
+                            <input matInput placeholder="Last Name" name="lname" [(ngModel)]="register.lastName">
+                        </mat-form-field>
+                    </form>
+                    <form>
+                        <mat-form-field style="width:26vw">
+                            <mat-label>Username</mat-label>
+                            <input matInput placeholder="Username" name="email" [(ngModel)]="register.email">
+                            <mat-hint>you can use letters,numbers & periods</mat-hint>
+                        </mat-form-field>
+                    </form>
+
+                    <form>
+                        <mat-form-field>
+                            <mat-label>Password</mat-label>
+                            <input type="password" matInput placeholder="password" name="password"
+                                [(ngModel)]="register.password">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Confirm</mat-label>
+                            <input type="password" matInput placeholder="Confirm">
+                        </mat-form-field>
+                    </form>
+                    <div class="button">
+                        <div>
+                            <button mat-flat-button>Sign in insted</button>
+                        </div>
+                        <form (ngSubmit)="submit()">
+                            <div>
+                                <button mat-flat-button color="primary">Next</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="image-container">
+                <figure class=image>
+                    <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" width="244" height="244"
+                        class="j9NuTc TrZEUc">
+                </figure>
+            </div>
+        </div>
+    </mat-card>
+
+</div>
