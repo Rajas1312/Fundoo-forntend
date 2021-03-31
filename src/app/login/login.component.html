@@ -1,0 +1,68 @@
+<div class="form-container" role="presentation">
+    <mat-card fxFlex="50">
+        <div class="title">
+            <div>
+                <span class="f">F</span>
+                <span class="u">U</span>
+                <span class="n">N</span>
+                <span class="d">D</span>
+                <span class="o">O</span>
+                <span class="O">O </span>
+
+                <span class="f">N</span>
+                <span class="u">O</span>
+                <span class="n">T</span>
+                <span class="d">E</span>
+                <span class="o">S</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="sign-in">
+                <span>Sign in</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="subtext-one">
+                <span>Use your google account</span>
+            </div>
+        </div>
+
+        <form class="email">
+            <mat-form-field style="width:26vw">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="" name="email" [(ngModel)]="login.email"
+                    pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                <mat-error>invalid email</mat-error>
+            </mat-form-field>
+        </form>
+
+        <form class="password">
+            <mat-form-field style="width:26vw">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="" name="password" type="password" [(ngModel)]="login.password">
+            </mat-form-field>
+        </form>
+
+        <div class="button-forgot">
+            <div>
+                <button mat-flat-button>forgot pssword?</button>
+            </div>
+
+        </div>
+
+        <div class="button">
+            <div>
+                <button mat-flat-button [routerLink]="['']">Create Account</button>
+            </div>
+            <form (ngSubmit)="submit()">
+                <div>
+                    <button mat-flat-button color="accent">Next</button>
+                </div>
+            </form>
+
+        </div>
+    </mat-card>
+
+</div>

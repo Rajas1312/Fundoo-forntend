@@ -1,0 +1,83 @@
+.form-container{
+    margin: 50px; 
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px;
+}
+.email{
+    padding-left: 100px;
+    padding-top: 30px;
+}
+.password{
+    padding-left: 100px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.button{
+    padding-top: 8px;
+    padding-right: 80px;
+    padding-left: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-forgot{
+    padding-top: 0px;
+    padding-right: 60px;
+    padding-left: 80px;
+    padding-bottom: 10px;
+    display: flex;
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    color: rgb(53, 163, 226);
+
+}
+.sign-in{
+    display: flex;
+    justify-content: center;
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 16px;
+}
+.subtext-one{
+    display: flex;
+    justify-content: center;
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 8px;
+}
+
+.f{
+    color: rgb(31, 31, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+    
+}
+.u{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+}
+.n{
+    color: yellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+}
+.d{
+    color:blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+}
+.o{
+    color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+}
+.O{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: medium;
+}

@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatCardModule } from '@angular/material/card';
@@ -11,8 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterationComponent } from './registeration/registeration.component';
-import { PostsComponent } from './posts/posts.component';
+import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ForgotpassordComponent } from './forgotpassord/forgotpassord.component';
 
 
 
@@ -20,7 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     RegisterationComponent,
-    PostsComponent,
+    LoginComponent,
+    ForgotpassordComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,15 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {
+        path: '', component: RegisterationComponent
+      },
+      { path: 'login', component: LoginComponent },
+      { path: 'forgotpassword', component: ForgotpassordComponent }
+    ])
+
 
   ],
   providers: [],
