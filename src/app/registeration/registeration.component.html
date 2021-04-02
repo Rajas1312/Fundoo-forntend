@@ -60,6 +60,8 @@
                         <form (ngSubmit)="submit()">
                             <div>
                                 <button mat-flat-button color="primary">Next</button>
+                                <div *ngIf="success==true;">{{message}}</div>
+
                             </div>
                         </form>
 

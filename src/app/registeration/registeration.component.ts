@@ -8,7 +8,11 @@ import { Register } from './register.model';
   styleUrls: ['./registeration.component.css']
 })
 export class RegisterationComponent implements OnInit {
-  register = new Register()
+  register = new Register();
+  message: any
+  data: any
+  success: any
+  error: any
   constructor(
     private dataservice: RegisterService
   ) { }
@@ -18,7 +22,9 @@ export class RegisterationComponent implements OnInit {
   submit() {
     this.dataservice.registerUser(this.register).subscribe(res => {
       console.log(res)
-
+      this.data = res
+      this.message = this.data.message
+      this.success = this.data.Success
     })
   }
 

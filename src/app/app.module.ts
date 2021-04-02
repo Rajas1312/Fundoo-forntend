@@ -7,7 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,7 @@ import { RegisterationComponent } from './registeration/registeration.component'
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ForgotpassordComponent } from './forgotpassord/forgotpassord.component';
+import { ResetComponent } from './reset/reset.component';
 
 
 
@@ -23,7 +24,8 @@ import { ForgotpassordComponent } from './forgotpassord/forgotpassord.component'
     AppComponent,
     RegisterationComponent,
     LoginComponent,
-    ForgotpassordComponent
+    ForgotpassordComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule,
@@ -36,12 +38,15 @@ import { ForgotpassordComponent } from './forgotpassord/forgotpassord.component'
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path: '', component: RegisterationComponent
       },
       { path: 'login', component: LoginComponent },
-      { path: 'forgotpassword', component: ForgotpassordComponent }
+      { path: 'forgotpassword', component: ForgotpassordComponent },
+      { path: 'resetpassword', component: ResetComponent }
+
     ])
 
 

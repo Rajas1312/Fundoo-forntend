@@ -32,34 +32,27 @@
         <form>
             <form class="email">
                 <mat-form-field style="width:26vw">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="" name="email" [(ngModel)]="login.email"
-                        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                    <mat-label>Token</mat-label>
+                    <input matInput placeholder="" name="token" [(ngModel)]="reset.token">
                     <mat-error>invalid email</mat-error>
                 </mat-form-field>
             </form>
 
             <form class="password">
                 <mat-form-field style="width:26vw">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="" name="password" type="password" [(ngModel)]="login.password">
+                    <mat-label> New Password</mat-label>
+                    <input matInput placeholder="" name="password" type="password" [(ngModel)]="reset.password">
                 </mat-form-field>
             </form>
 
-            <div class="button-forgot">
-                <div>
-                    <button mat-flat-button [routerLink]="['/forgotpassword']">forgot pssword?</button>
-                </div>
-
-            </div>
 
             <div class="button">
                 <div>
-                    <button mat-flat-button [routerLink]="['']">Create Account</button>
+                    <button mat-flat-button [routerLink]="['/login']">login</button>
                 </div>
                 <form (ngSubmit)="submit()">
                     <div>
-                        <button mat-flat-button color="accent">Next</button>
+                        <button mat-flat-button color="accent">Save</button>
                     </div>
                 </form>
             </div>

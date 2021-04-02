@@ -19,7 +19,7 @@
 
         <div>
             <div class="sign-in">
-                <span>Sign in</span>
+                <span>Account Recovery</span>
             </div>
         </div>
 
@@ -38,21 +38,16 @@
             </mat-form-field>
         </form>
 
-        <div class="button-forgot">
-            <div>
-                <button mat-flat-button>forgot pssword?</button>
-            </div>
-
-        </div>
-
-        <div class="button">
-            <form (ngSubmit)="submit()">
+        <form (ngSubmit)="submit()">
+            <div class="button-forgot">
                 <div>
-                    <button mat-flat-button color="accent">Next</button>
+                    <button mat-flat-button [routerLink]="['/resetpassword']">send email</button>
                 </div>
-            </form>
 
-        </div>
+            </div>
+        </form>
+
+
     </mat-card>
 
 </div>
