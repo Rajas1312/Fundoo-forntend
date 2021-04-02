@@ -1,6 +1,7 @@
 import { RegisterService } from './../register.service';
 import { Component, OnInit } from '@angular/core';
 import { Register } from './register.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-registeration',
@@ -14,7 +15,8 @@ export class RegisterationComponent implements OnInit {
   success: any
   error: any
   constructor(
-    private dataservice: RegisterService
+    private dataservice: RegisterService,
+    private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
@@ -24,7 +26,16 @@ export class RegisterationComponent implements OnInit {
       console.log(res)
       this.data = res
       this.message = this.data.message
-      this.success = this.data.Success
+      this._snackBar.open(this.message, '', {
+        duration: 3000
+      })
+    }, err => {
+      this.error = err
+      this.success = this.error.message
+      this._snackBar.open(this.success, '', {
+        duration: 3000
+      })
+
     })
   }
 
