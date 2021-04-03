@@ -1,5 +1,6 @@
 import { ResetService } from './../reset.service';
 import { ResetPassword } from './reset.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,16 +11,30 @@ import { Component, OnInit } from '@angular/core';
 export class ResetComponent implements OnInit {
 
   reset = new ResetPassword()
+  message: any
+  data: any
+  success: any
+  error: any
 
-  constructor(private dataservice: ResetService) { }
+  constructor(private dataservice: ResetService,
+    private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
 
   submit() {
     this.dataservice.resetUser(this.reset).subscribe(res => {
-      console.log(res)
-
+      this.data = res
+      this.message = this.data.message
+      this._snackBar.open(this.message, '', {
+        duration: 3000
+      })
+    }, err => {
+      this.error = err
+      this.success = this.error.message
+      this._snackBar.open(this.success, '', {
+        duration: 3000
+      })
     })
   }
 

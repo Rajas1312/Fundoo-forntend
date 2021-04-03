@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ForgotpassordComponent } from './forgotpassord/forgotpassord.component';
 import { ResetComponent } from './reset/reset.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -26,7 +27,8 @@ import { ResetComponent } from './reset/reset.component';
     RegisterationComponent,
     LoginComponent,
     ForgotpassordComponent,
-    ResetComponent
+    ResetComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -47,11 +49,10 @@ import { ResetComponent } from './reset/reset.component';
       },
       { path: 'login', component: LoginComponent },
       { path: 'forgotpassword', component: ForgotpassordComponent },
-      { path: 'resetpassword', component: ResetComponent }
+      { path: 'resetpassword', component: ResetComponent },
+      { path: 'dashboard', component: DashboardComponent }
 
     ])
-
-
   ],
   providers: [],
   bootstrap: [AppComponent]
