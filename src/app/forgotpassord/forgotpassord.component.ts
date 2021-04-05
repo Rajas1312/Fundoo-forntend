@@ -2,7 +2,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ForgotPassword } from './forgotpassord.model';
 import { ForgotpassordService } from './../forgotpassord.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-forgotpassord',
@@ -11,7 +11,9 @@ import { Router } from '@angular/router';
 })
 export class ForgotpassordComponent implements OnInit {
 
-  forgot = new ForgotPassword
+  forgot = new ForgotPassword()
+  data: any
+  token: any
   constructor(
     private dataservice: ForgotpassordService,
     private router: Router,
@@ -22,6 +24,10 @@ export class ForgotpassordComponent implements OnInit {
   }
   submit() {
     this.dataservice.loginUser(this.forgot).subscribe(res => {
+      //console.log(res)
+      this.data = res
+      this.token = this.data.token
+      console.log(this.token)
       this._snackBar.open('Email Sent Sucessfully!', '', {
         duration: 2000
       })

@@ -21,6 +21,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       },
       { path: 'login', component: LoginComponent },
       { path: 'forgotpassword', component: ForgotpassordComponent },
-      { path: 'resetpassword', component: ResetComponent },
+      { path: 'resetpassword/:token', component: ResetComponent },
       { path: 'dashboard', component: DashboardComponent }
 
     ])

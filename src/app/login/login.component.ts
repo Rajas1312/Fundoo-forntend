@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
   })
 
   login = new Login()
-
   constructor(
     private dataservice: LoginService,
     private router: Router,
@@ -28,7 +27,8 @@ export class LoginComponent implements OnInit {
   }
   submit() {
     this.dataservice.loginUser(this.login).subscribe(res => {
-      this.router.navigate(['dashboard'])
+
+      this.router.navigate(['/dashboard'])
     }, error => {
       this._snackBar.open('invalid cerdentials!', '', {
         duration: 3000

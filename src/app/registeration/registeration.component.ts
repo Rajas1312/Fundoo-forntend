@@ -6,7 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-registeration',
   templateUrl: './registeration.component.html',
-  styleUrls: ['./registeration.component.css']
+  styleUrls: ['./registeration.component.scss']
 })
 export class RegisterationComponent implements OnInit {
   register = new Register();

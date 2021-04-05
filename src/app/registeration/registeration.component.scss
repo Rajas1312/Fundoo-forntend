@@ -1,4 +1,4 @@
-
+@import '../../style/color.scss';
 
 .form-container{
     margin: 50px; 
@@ -31,33 +31,33 @@
     justify-content: space-between;
 }
 .f{
-    color: rgb(31, 31, 255);
+    color:$primary-blue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     font-size: xx-large;
     
 }
 .u{
-    color: red;
+    color:$primary-red;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     font-size: xx-large;
 }
 .n{
-    color: yellow;
+    color:$primary-yellow;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     font-size: xx-large;
 }
 .d{
-    color:blue;
+    color:$primary-blue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     font-size: xx-large;
 }
 .o{
-    color: green;
+    color:$primary-green;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     font-size: xx-large;
 }
 .O{
-    color: red;
+    color:$primary-red;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     font-size: xx-large;
 }
