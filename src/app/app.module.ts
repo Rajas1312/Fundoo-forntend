@@ -9,6 +9,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon'
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -44,6 +47,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppRoutingModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+    MatToolbarModule,
+    MatIconModule,
     RouterModule.forRoot([
       {
         path: '', component: RegisterationComponent
@@ -56,6 +61,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { }
