@@ -12,10 +12,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon'
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RegisterationComponent } from './registeration/registeration.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ForgotpassordComponent } from './forgotpassord/forgotpassord.component';
@@ -28,7 +29,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterationComponent,
+    RegistrationComponent,
     LoginComponent,
     ForgotpassordComponent,
     ResetComponent,
@@ -49,9 +50,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatSnackBarModule,
     MatToolbarModule,
     MatIconModule,
+    MatSidenavModule,
     RouterModule.forRoot([
       {
-        path: '', component: RegisterationComponent
+        path: '', component: RegistrationComponent
       },
       { path: 'login', component: LoginComponent },
       { path: 'forgotpassword', component: ForgotpassordComponent },

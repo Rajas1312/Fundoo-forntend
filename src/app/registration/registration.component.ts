@@ -4,11 +4,11 @@ import { Register } from './register.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
-  selector: 'app-registeration',
-  templateUrl: './registeration.component.html',
-  styleUrls: ['./registeration.component.scss']
+  selector: 'app-registration',
+  templateUrl: './registration.component.html',
+  styleUrls: ['./registration.component.scss']
 })
-export class RegisterationComponent implements OnInit {
+export class RegistrationComponent implements OnInit {
   register = new Register();
   message: any
   data: any

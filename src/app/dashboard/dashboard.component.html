@@ -2,7 +2,7 @@
     <div class="header">
         <div class="header-main-1" role="button">
             <button mat-icon-button>
-                <mat-icon> menu </mat-icon>
+                <mat-icon (click)="onToolBarToggle()"> menu </mat-icon>
             </button>
             <div class="keep-icon" role="button">
                 <button mat-flat-button style="padding: 0%;"><img class="google"
@@ -14,33 +14,57 @@
         </div>
 
         <div class="header-main-2">
-            <mat-form-field appearance="outline" style="width: 50vw;height: 70px;">
+            <!-- <mat-form-field appearance="outline" style="width: 50vw;">
+                    <input matInput placeholder="Search">
+                </mat-form-field> -->
+
+            <mat-form-field class="main-form" appearance="outline" style="width: 50vw;height: 70px;">
                 <div class="form">
                     <button mat-icon-button>
                         <mat-icon>search</mat-icon>
                     </button>
-                    <input matInput placeholder="Search">
+                    <input matInput placeholder="Search" style="padding: 0;">
                 </div>
-
             </mat-form-field>
         </div>
         <div class="header-main-3">
             <button mat-icon-button>
-                <mat-icon> refresh</mat-icon>
+                <mat-icon> account_circle</mat-icon>
             </button>
-            <button mat-icon-button>
-                <mat-icon> list</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon> settings</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon> apps</mat-icon>
-            </button>
-
-
         </div>
     </div>
-
-
 </mat-card>
+<!-- 
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+        <div class="bulb">
+            <button mat-icon-button>
+                <mat-icon>lightbulb</mat-icon>
+            </button>
+
+        </div>
+        <div>
+            <button mat-icon-button>
+                <mat-icon>notifications</mat-icon>
+            </button>
+        </div>
+        <div>
+            <button mat-icon-button>
+                <mat-icon>edit</mat-icon>
+            </button>
+        </div>
+        <div>
+            <button mat-icon-button>
+                <mat-icon>archive</mat-icon>
+            </button>
+        </div>
+        <div>
+            <button mat-icon-button>
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        main
+    </mat-sidenav-content>
+</mat-sidenav-container> -->
