@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  isMenuOpen = true;
+  isMenuOpen = false;
   contentMargin = 240
 
   task: string[] = [
@@ -16,7 +17,13 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   onToolBarToggle() {
-    console.log("hi")
+    console.log(this.isMenuOpen)
+    this.isMenuOpen = !this.isMenuOpen
+    if (!this.isMenuOpen) {
+      this.contentMargin = 70;
+    } else {
+      this.contentMargin = 240;
+    }
   }
 
   ngOnInit(): void {
