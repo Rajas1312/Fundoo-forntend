@@ -1,3 +1,4 @@
+// import { ResetComponent } from './../reset/reset.component';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
@@ -10,17 +11,13 @@ export class DashboardComponent implements OnInit {
   isMenuOpen = false;
   contentMargin = 240
 
-  task: string[] = [
-    'Clearning out my closet', 'Take out trash bins', 'Wash car', 'Tank up the motorcycles', 'Go for flight training'
-  ]
-
   constructor() { }
 
   onToolBarToggle() {
     console.log(this.isMenuOpen)
     this.isMenuOpen = !this.isMenuOpen
     if (!this.isMenuOpen) {
-      this.contentMargin = 70;
+      this.contentMargin = 50;
     } else {
       this.contentMargin = 240;
     }

@@ -1,4 +1,4 @@
-<mat-card style="padding: 5px;">
+<mat-card style="padding: 0px;">
     <div class="header">
         <div class="header-main-1" role="button">
             <button mat-icon-button>
@@ -9,7 +9,7 @@
                         src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png"
                         srcset="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png 1x, https://www.gstatic.com/images/branding/product/2x/keep_2020q4_48dp.png 2x "
                         alt="" aria-hidden="true" style="width:40px;height:40px;padding-top: 0px;"> </button>
-                <div class="keep-text" role="button">fundoo notes</div>
+                <div class="keep-text" role="button">fundooNotes</div>
             </div>
         </div>
 
@@ -108,9 +108,11 @@
                 Bin
             </button>
         </div>
-
     </mat-sidenav>
 
     <mat-sidenav-content class="main-content" [ngStyle]="{ 'margin-left.px': contentMargin }">
+        <div class="main-addnote">
+            <app-addnote></app-addnote>
+        </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

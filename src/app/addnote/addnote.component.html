@@ -1,0 +1,33 @@
+<mat-accordion class="addNote">
+    <!-- #docregion basic-panel -->
+    <!-- #docregion hide-toggle -->
+    <mat-expansion-panel [expanded]="panelOpenState" (opened)="onCloseClick()" hideToggle>
+        <!-- #enddocregion hide-toggle -->
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <textarea class="title" matInput placeholder="Title" autocomplete="off" cdkTextareaAutosize
+                    #autosize="cdkTextareaAutosize"></textarea>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <input class="title" matInput placeholder="Take a note...">
+        <div class="close-button">
+            <div class="note-icon">
+                <button mat-icon-button>
+                    <mat-icon>add_alert</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>person_add_alt</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>archive</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+            </div>
+            <div>
+                <button mat-button (click)="onCloseClick()">close</button>
+            </div>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
