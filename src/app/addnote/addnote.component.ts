@@ -1,3 +1,5 @@
+import { AddnoteService } from './../addnote.service';
+import { Note } from './addnote.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,15 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addnote.component.scss']
 })
 export class AddnoteComponent implements OnInit {
-  panelOpenState = true;
+  panelOpenState = false;
+  notes = new Note()
 
   onCloseClick() {
     this.panelOpenState = !this.panelOpenState
   }
 
-  constructor() { }
+  constructor(private dataservice: AddnoteService) { }
 
   ngOnInit(): void {
+  }
+
+  submit() {
+    this.dataservice.addNote(this.notes).subscribe(res => {
+      console.log(res)
+    }, err => {
+      console.log(err)
+
+    })
   }
 
 }

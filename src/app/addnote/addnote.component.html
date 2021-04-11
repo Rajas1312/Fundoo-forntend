@@ -1,15 +1,15 @@
 <mat-accordion class="addNote">
     <!-- #docregion basic-panel -->
     <!-- #docregion hide-toggle -->
-    <mat-expansion-panel [expanded]="panelOpenState" (opened)="onCloseClick()" hideToggle>
+    <mat-expansion-panel [expanded]="panelOpenState" hideToggle>
         <!-- #enddocregion hide-toggle -->
         <mat-expansion-panel-header>
             <mat-panel-title>
                 <textarea class="title" matInput placeholder="Title" autocomplete="off" cdkTextareaAutosize
-                    #autosize="cdkTextareaAutosize"></textarea>
+                    #autosize="cdkTextareaAutosize" [(ngModel)]="notes.title"></textarea>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <input class="title" matInput placeholder="Take a note...">
+        <input class="title" matInput placeholder="Take a note..." [(ngModel)]="notes.description">
         <div class="close-button">
             <div class="note-icon">
                 <button mat-icon-button>
@@ -31,9 +31,9 @@
                     <mat-icon fontSet="material-icons-outlined">more_vert</mat-icon>
                 </button>
             </div>
-            <div>
+            <form (ngSubmit)="submit()">
                 <button mat-button (click)="onCloseClick()">close</button>
-            </div>
+            </form>
         </div>
     </mat-expansion-panel>
 </mat-accordion>

@@ -17,6 +17,8 @@ export class LoginComponent implements OnInit {
   })
 
   login = new Login()
+  data: any
+  token: any
   constructor(
     private dataservice: LoginService,
     private router: Router,
@@ -27,6 +29,9 @@ export class LoginComponent implements OnInit {
   }
   submit() {
     this.dataservice.loginUser(this.login).subscribe(res => {
+      this.data = res
+      this.token = this.data.token
+      localStorage.setItem('token', this.token)
 
       this.router.navigate(['/dashboard'])
     }, error => {
