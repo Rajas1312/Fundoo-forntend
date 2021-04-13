@@ -4,6 +4,7 @@ import { Login } from './login.model';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { JwtHelperService } from "@auth0/angular-jwt";
 
 @Component({
   selector: 'login-posts',
@@ -32,13 +33,12 @@ export class LoginComponent implements OnInit {
       this.data = res
       this.token = this.data.token
       localStorage.setItem('token', this.token)
-
       this.router.navigate(['/dashboard'])
     }, error => {
       this._snackBar.open('invalid cerdentials!', '', {
         duration: 3000
       })
     })
+    this.dataservice.loggedIn()
   }
-
 }

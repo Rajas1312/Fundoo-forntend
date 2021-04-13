@@ -1,3 +1,5 @@
+import { AuthGuard } from './auth-guard.service';
+
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,6 +26,7 @@ import { ForgotpassordComponent } from './forgotpassord/forgotpassord.component'
 import { ResetComponent } from './reset/reset.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddnoteComponent } from './addnote/addnote.component';
+import { GetnoteComponent } from './getnote/getnote.component';
 
 
 
@@ -38,6 +41,7 @@ import { AddnoteComponent } from './addnote/addnote.component';
     ResetComponent,
     DashboardComponent,
     AddnoteComponent,
+    GetnoteComponent,
 
 
   ],
@@ -65,11 +69,11 @@ import { AddnoteComponent } from './addnote/addnote.component';
       { path: 'login', component: LoginComponent },
       { path: 'forgotpassword', component: ForgotpassordComponent },
       { path: 'resetpassword/:token', component: ResetComponent },
-      { path: 'dashboard', component: DashboardComponent }
+      { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
 
     ])
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

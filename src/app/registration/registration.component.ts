@@ -35,7 +35,6 @@ export class RegistrationComponent implements OnInit {
       this._snackBar.open(this.success, '', {
         duration: 3000
       })
-
     })
   }
 

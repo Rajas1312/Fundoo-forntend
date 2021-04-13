@@ -21,11 +21,11 @@ export class AddnoteComponent implements OnInit {
   }
 
   submit() {
+    this.panelOpenState = !this.panelOpenState
     this.dataservice.addNote(this.notes).subscribe(res => {
       console.log(res)
     }, err => {
       console.log(err)
-
     })
   }
 

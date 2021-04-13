@@ -6,10 +6,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoginService {
+  data1: any
 
   constructor(private http: HttpClient) { }
 
   loginUser(data) {
+    this.data1 = data
     return this.http.post(environment.loginURL, data)
+  }
+  loggedIn() {
+    if (this.data1.email) {
+      return true
+    }
   }
 }
