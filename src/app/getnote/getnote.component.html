@@ -1,10 +1,10 @@
-<div>
-    <mat-card class="card">
+<div class="main-box">
+    <mat-card class="card" *ngFor="let array of arr">
         <div class="title">
-            {{title}}
+            {{array.title}}
         </div>
         <div class="description">
-            {{description}}
+            {{array.description}}
         </div>
         <div>
             <button mat-icon-button>

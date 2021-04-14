@@ -7,31 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./getnote.component.scss']
 })
 export class GetnoteComponent implements OnInit {
-  data: any
+  public data: any
+  public arr = []
   title: any
   description: any
-
 
   constructor(private dataservice: GetnoteService) { }
 
   ngOnInit(): void {
+    this.submit()
+  }
+  submit() {
     this.dataservice.getNotes().subscribe(res => {
-      this.data = res;
-      // this.title = this.data.data[0].title
-      // this.description = this.data.data[0].description
-      // console.log(this.data.data)
-      // console.log(this.title)
-      // console.log(this.description)
-      for (let i = this.data.data.length - 1; i >= 0; i--) {
-        this.title = this.data.data[i].title
-        this.description = this.data.data[i].description
-        console.log(this.title)
-        console.log(this.description)
-      }
-
+      this.data = res
+      this.arr = this.data.data
+      console.log(this.arr.length)
     })
   }
-
 
 
 }
