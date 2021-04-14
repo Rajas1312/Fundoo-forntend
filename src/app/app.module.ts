@@ -27,6 +27,7 @@ import { ResetComponent } from './reset/reset.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddnoteComponent } from './addnote/addnote.component';
 import { GetnoteComponent } from './getnote/getnote.component';
+import { IconsComponent } from './icons/icons.component';
 
 
 
@@ -42,6 +43,7 @@ import { GetnoteComponent } from './getnote/getnote.component';
     DashboardComponent,
     AddnoteComponent,
     GetnoteComponent,
+    IconsComponent,
 
 
   ],

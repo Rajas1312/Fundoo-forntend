@@ -15,24 +15,7 @@
             <input class="title" matInput placeholder="Take a note..." [(ngModel)]="notes.description" name="first">
             <div class="close-button">
                 <div class="note-icon">
-                    <button mat-icon-button>
-                        <mat-icon fontSet="material-icons-outlined">add_alert</mat-icon>
-                    </button>
-                    <button mat-icon-button>
-                        <mat-icon fontSet="material-icons-outlined">person_add_alt</mat-icon>
-                    </button>
-                    <button mat-icon-button>
-                        <mat-icon fontSet="material-icons-outlined">palette</mat-icon>
-                    </button>
-                    <button mat-icon-button>
-                        <mat-icon fontSet="material-icons-outlined">image</mat-icon>
-                    </button>
-                    <button mat-icon-button>
-                        <mat-icon fontSet="material-icons-outlined">archive</mat-icon>
-                    </button>
-                    <button mat-icon-button>
-                        <mat-icon fontSet="material-icons-outlined">more_vert</mat-icon>
-                    </button>
+                    <app-icons></app-icons>
                 </div>
                 <button mat-button (click)="onCloseClick()">close</button>
             </div>
