@@ -27,6 +27,6 @@ export class AddnoteComponent implements OnInit {
     }, err => {
       console.log(err)
     })
+    this.notes
   }
-
 }
