@@ -1,0 +1,12 @@
+.update-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+::ng-deep .input.mat-input-element{
+    margin-bottom: 2px;
+}
+
+.title{
+    margin-bottom: 20px;
+}

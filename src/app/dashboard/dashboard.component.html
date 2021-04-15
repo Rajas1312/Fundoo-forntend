@@ -24,7 +24,10 @@
             </mat-form-field>
         </div>
         <div class="header-main-3">
-            <button mat-icon-button>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item [routerLink]="['/login']">Logout</button>
+                </mat-menu>
                 <mat-icon fontSet="material-icons-outlined"> account_circle</mat-icon>
             </button>
         </div>

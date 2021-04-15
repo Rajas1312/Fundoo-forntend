@@ -1,5 +1,5 @@
 <div class="main-box">
-    <mat-card class="card" *ngFor="let array of arr">
+    <mat-card class="card" *ngFor="let array of arr" (click)="onClick()">
         <div class="title">
             {{array.title}}
         </div>

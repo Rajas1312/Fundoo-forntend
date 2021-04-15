@@ -1,13 +1,13 @@
 import { AddnoteService } from './../addnote.service';
 import { Note } from './addnote.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-addnote',
   templateUrl: './addnote.component.html',
   styleUrls: ['./addnote.component.scss']
 })
-export class AddnoteComponent implements OnInit {
+export class AddnoteComponent implements OnInit, OnChanges {
   panelOpenState = false;
   notes = new Note()
 
@@ -16,6 +16,10 @@ export class AddnoteComponent implements OnInit {
   }
 
   constructor(private dataservice: AddnoteService) { }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes)
+  }
 
   ngOnInit(): void {
   }

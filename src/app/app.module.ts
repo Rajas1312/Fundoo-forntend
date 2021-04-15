@@ -16,6 +16,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon'
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,6 +30,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddnoteComponent } from './addnote/addnote.component';
 import { GetnoteComponent } from './getnote/getnote.component';
 import { IconsComponent } from './icons/icons.component';
+import { UpdatenoteComponent } from './updatenote/updatenote.component';
 
 
 
@@ -44,8 +47,7 @@ import { IconsComponent } from './icons/icons.component';
     AddnoteComponent,
     GetnoteComponent,
     IconsComponent,
-
-
+    UpdatenoteComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +66,8 @@ import { IconsComponent } from './icons/icons.component';
     MatIconModule,
     MatSidenavModule,
     MatExpansionModule,
+    MatMenuModule,
+    MatDialogModule,
     RouterModule.forRoot([
       {
         path: '', component: RegistrationComponent
