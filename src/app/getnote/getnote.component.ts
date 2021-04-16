@@ -31,6 +31,7 @@ export class GetnoteComponent implements OnInit, OnChanges {
       this.arr = this.arr.reverse()
       console.log(this.arr.length)
     })
+
   }
 
   onClick() {
