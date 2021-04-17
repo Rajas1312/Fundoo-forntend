@@ -7,7 +7,7 @@ import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
   templateUrl: './addnote.component.html',
   styleUrls: ['./addnote.component.scss']
 })
-export class AddnoteComponent implements OnInit, OnChanges {
+export class AddnoteComponent implements OnInit {
   panelOpenState = false;
   notes = new Note()
 
@@ -17,13 +17,9 @@ export class AddnoteComponent implements OnInit, OnChanges {
 
   constructor(private dataservice: AddnoteService) { }
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log(changes)
-  }
-
   ngOnInit(): void {
-  }
 
+  }
   submit() {
     this.panelOpenState = !this.panelOpenState
     this.dataservice.addNote(this.notes).subscribe(res => {
@@ -31,6 +27,6 @@ export class AddnoteComponent implements OnInit, OnChanges {
     }, err => {
       console.log(err)
     })
-    this.notes
   }
+
 }

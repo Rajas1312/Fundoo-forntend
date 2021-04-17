@@ -1,8 +1,9 @@
 <form class="update-form">
     <div class="title">
-        <input matInput placeholder=Title>
+        <input matInput placeholder=Title [(ngModel)]="notes.title" name="title">
     </div>
-
-    <div> <input matInput placeholder='Take Note..'></div>
-
+    <div> <input matInput placeholder='Take Note..' [(ngModel)]="notes.description" name="note"></div>
+    <div class="close">
+        <button mat-button [mat-dialog-close]="true" (click)="submit()">close</button>
+    </div>
 </form>

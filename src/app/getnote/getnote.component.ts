@@ -10,7 +10,7 @@ import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 })
 export class GetnoteComponent implements OnInit, OnChanges {
   public data: any
-  public arr = []
+  public arr: any
   title: any
   description: any
 
@@ -29,15 +29,18 @@ export class GetnoteComponent implements OnInit, OnChanges {
       this.data = res
       this.arr = this.data.data
       this.arr = this.arr.reverse()
-      console.log(this.arr.length)
+      console.log(this.arr.title)
     })
 
   }
 
   onClick() {
-    this.dilouge.open(UpdatenoteComponent, {
-      height: '120px',
+    let dilougeRef = this.dilouge.open(UpdatenoteComponent, {
+      height: '170px',
       width: '400px',
+    })
+    dilougeRef.afterClosed().subscribe(res => {
+      console.log(res)
     })
   }
 
