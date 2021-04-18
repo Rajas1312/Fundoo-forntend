@@ -12,7 +12,7 @@ export class LoginService {
 
   loginUser(data) {
     this.data1 = data
-    return this.http.post(environment.loginURL, data)
+    return this.http.post(environment.baseURL + 'login', data)
   }
   loggedIn() {
     if (this.data1.email) {

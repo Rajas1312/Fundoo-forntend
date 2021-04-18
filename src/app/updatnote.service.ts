@@ -14,6 +14,6 @@ export class UpdatnoteService {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('token')
     });
-    return this.http.put(environment.updateNote + '/' + localStorage.getItem('id'), data, { headers: reqHeader })
+    return this.http.put(environment.baseURL + 'notes' + '/' + localStorage.getItem('id'), data, { headers: reqHeader })
   }
 }

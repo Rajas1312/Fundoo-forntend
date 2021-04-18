@@ -9,6 +9,6 @@ export class ResetService {
 
   constructor(private http: HttpClient) { }
   resetUser(data) {
-    return this.http.post(environment.resetURL, data)
+    return this.http.post(environment.baseURL + 'resetPassword', data)
   }
 }

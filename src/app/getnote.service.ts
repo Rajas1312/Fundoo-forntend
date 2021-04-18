@@ -14,6 +14,6 @@ export class GetnoteService {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('token')
     });
-    return this.http.get(environment.addnoteURL, { headers: reqHeader })
+    return this.http.get(environment.baseURL + 'notes', { headers: reqHeader })
   }
 }

@@ -10,6 +10,6 @@ export class ForgotpassordService {
   constructor(private http: HttpClient) { }
 
   loginUser(data) {
-    return this.http.post(environment.forgotURL, data)
+    return this.http.post(environment.baseURL + 'forgotPassword', data)
   }
 }

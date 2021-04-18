@@ -14,6 +14,6 @@ export class DeletenoteService {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('token')
     });
-    return this.http.delete(environment.updateNote + '/' + localStorage.getItem('id'), { headers: reqHeader })
+    return this.http.delete(environment.baseURL + 'notes' + '/' + localStorage.getItem('id'), { headers: reqHeader })
   }
 }
