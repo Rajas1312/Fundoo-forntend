@@ -5,15 +5,15 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class UpdatnoteService {
+export class DeletenoteService {
 
   constructor(private http: HttpClient) { }
 
-  updateNotes(data) {
+  deleteNotes() {
     var reqHeader = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('token')
     });
-    return this.http.put(environment.updateNote + '/' + localStorage.getItem('id'), data, { headers: reqHeader })
+    return this.http.delete(environment.updateNote + '/' + localStorage.getItem('id'), { headers: reqHeader })
   }
 }

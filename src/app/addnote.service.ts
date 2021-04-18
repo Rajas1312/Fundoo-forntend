@@ -13,6 +13,6 @@ export class AddnoteService {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('token')
     });
-    return this.http.post(environment.addnoteURL, data, { headers: reqHeader })
+    return this.http.post(environment.baseURL + 'notes', data, { headers: reqHeader })
   }
 }

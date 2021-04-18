@@ -31,10 +31,7 @@ import { AddnoteComponent } from './addnote/addnote.component';
 import { GetnoteComponent } from './getnote/getnote.component';
 import { IconsComponent } from './icons/icons.component';
 import { UpdatenoteComponent } from './updatenote/updatenote.component';
-
-
-
-
+import { DeletenoteComponent } from './deletenote/deletenote.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +45,7 @@ import { UpdatenoteComponent } from './updatenote/updatenote.component';
     GetnoteComponent,
     IconsComponent,
     UpdatenoteComponent,
+    DeletenoteComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { GetnoteService } from './../getnote.service';
 import { AddnoteService } from './../addnote.service';
 import { Note } from './addnote.model';
 import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
@@ -15,7 +16,7 @@ export class AddnoteComponent implements OnInit {
     this.panelOpenState = !this.panelOpenState
   }
 
-  constructor(private dataservice: AddnoteService) { }
+  constructor(private dataservice: AddnoteService, private service: GetnoteService) { }
 
   ngOnInit(): void {
 
