@@ -1,3 +1,4 @@
+import { InterationService } from './../interation.service';
 import { MatDialog } from '@angular/material/dialog';
 import { GetnoteService } from './../getnote.service';
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
@@ -14,10 +15,13 @@ export class GetnoteComponent implements OnInit {
   id: any
   @Input() name: any
 
-  constructor(private dataservice: GetnoteService, private dilouge: MatDialog) { }
+  constructor(private dataservice: GetnoteService, private dilouge: MatDialog, private service: InterationService) {
+    this.submit()
+    this.addNote()
+  }
 
   ngOnInit(): void {
-    this.submit()
+
   }
   submit() {
     this.dataservice.getNotes().subscribe(res => {
@@ -36,12 +40,24 @@ export class GetnoteComponent implements OnInit {
     localStorage.setItem('id', data)
     dilougeRef.afterClosed().subscribe(res => {
       console.log(res)
+      this.submit()
       localStorage.removeItem('id')
     })
   }
 
   onDeleteClick(data) {
     localStorage.setItem('id', data)
+  }
+
+  addNote() {
+    this.service.add$.subscribe(message => {
+      this.submit()
+    })
+  }
+  deleteNote() {
+    this.service.add$.subscribe(message => {
+      this.submit()
+    })
   }
 
 }

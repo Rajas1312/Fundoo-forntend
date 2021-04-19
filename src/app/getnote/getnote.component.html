@@ -1,4 +1,4 @@
-<div class="main-box">
+<div class="main-box" (change)="addNote()">
     <mat-card class="card" *ngFor="let array of arr">
         <div class="title" (click)="onClick(array._id)">
             {{array.title}}
