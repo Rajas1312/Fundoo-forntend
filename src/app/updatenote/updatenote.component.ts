@@ -1,6 +1,7 @@
-import { UpdatnoteService } from './../updatnote.service';
+
 import { Note } from './../addnote/addnote.model';
 import { Component, OnInit } from '@angular/core';
+import { GetnoteService } from '../getnote.service';
 
 @Component({
   selector: 'app-updatenote',
@@ -11,13 +12,13 @@ export class UpdatenoteComponent implements OnInit {
 
   notes = new Note()
 
-  constructor(private datasevice: UpdatnoteService) { }
+  constructor(private service: GetnoteService) { }
 
   ngOnInit(): void {
   }
 
   submit() {
-    this.datasevice.updateNotes(this.notes).subscribe(res => {
+    this.service.updateNotes(this.notes).subscribe(res => {
       console.log(res)
     }, err => {
       console.log("err")

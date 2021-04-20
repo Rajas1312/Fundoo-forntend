@@ -1,10 +1,9 @@
+import { RegisterService } from '../user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { LoginService } from './../login.service';
 import { Login } from './login.model';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { JwtHelperService } from "@auth0/angular-jwt";
 
 @Component({
   selector: 'login-posts',
@@ -21,7 +20,7 @@ export class LoginComponent implements OnInit {
   data: any
   token: any
   constructor(
-    private dataservice: LoginService,
+    private dataservice: RegisterService,
     private router: Router,
     private _snackBar: MatSnackBar
   ) { }
@@ -35,10 +34,12 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('token', this.token)
       this.router.navigate(['/dashboard'])
     }, error => {
+      console.log(error)
       this._snackBar.open('invalid cerdentials!', '', {
         duration: 3000
       })
     })
-    this.dataservice.loggedIn()
+    return true
   }
+
 }

@@ -1,6 +1,6 @@
+import { RegisterService } from '../user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ForgotPassword } from './forgotpassord.model';
-import { ForgotpassordService } from './../forgotpassord.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
@@ -15,7 +15,7 @@ export class ForgotpassordComponent implements OnInit {
   data: any
   token: any
   constructor(
-    private dataservice: ForgotpassordService,
+    private dataservice: RegisterService,
     private router: Router,
     private _snackBar: MatSnackBar
   ) { }
@@ -23,7 +23,7 @@ export class ForgotpassordComponent implements OnInit {
   ngOnInit(): void {
   }
   submit() {
-    this.dataservice.loginUser(this.forgot).subscribe(res => {
+    this.dataservice.userForgotPasssword(this.forgot).subscribe(res => {
       //console.log(res)
       this.data = res
       this.token = this.data.token

@@ -1,4 +1,4 @@
-import { RegisterService } from './../register.service';
+import { RegisterService } from '../user.service';
 import { Component, OnInit } from '@angular/core';
 import { Register } from './register.model';
 import { MatSnackBar } from '@angular/material/snack-bar';

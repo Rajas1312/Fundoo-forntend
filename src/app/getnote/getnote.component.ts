@@ -1,8 +1,8 @@
 import { InterationService } from './../interation.service';
 import { MatDialog } from '@angular/material/dialog';
-import { GetnoteService } from './../getnote.service';
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
+import { GetnoteService } from '../getnote.service';
 
 @Component({
   selector: 'app-getnote',
@@ -28,6 +28,7 @@ export class GetnoteComponent implements OnInit {
       this.data = res
       this.arr = this.data.data
       this.arr = this.arr.reverse()
+
     })
 
   }

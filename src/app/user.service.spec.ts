@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ResetService } from './reset.service';
+import { RegisterService } from './user.service';
 
-describe('ResetService', () => {
-  let service: ResetService;
+describe('RegisterService', () => {
+  let service: RegisterService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ResetService);
+    service = TestBed.inject(RegisterService);
   });
 
   it('should be created', () => {

@@ -1,13 +1,19 @@
-<div class="main-box" (change)="addNote()">
-    <mat-card class="card" *ngFor="let array of arr">
-        <div class="title" (click)="onClick(array._id)">
-            {{array.title}}
-        </div>
-        <div class="description">
-            {{array.description}}
-        </div>
-        <div (click)="onDeleteClick(array._id)">
-            <app-icons></app-icons>
-        </div>
-    </mat-card>
+<div class="main-box">
+    <div class="box" *ngFor="let array of arr">
+        <ng-container *ngIf="array.isDeleted==false">
+            <mat-card class="card">
+
+                <div class="title" (click)="onClick(array._id)">
+                    {{array.title}}
+                </div>
+                <div class="description">
+                    {{array.description}}
+                </div>
+                <div (click)="onDeleteClick(array._id)">
+                    <app-icons></app-icons>
+                </div>
+            </mat-card>
+        </ng-container>
+    </div>
+
 </div>

@@ -1,4 +1,4 @@
-import { GetnoteService } from './../getnote.service';
+import { GetnoteService } from '../getnote.service';
 import { Component, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 

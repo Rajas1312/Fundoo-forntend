@@ -1,4 +1,4 @@
-import { ResetService } from './../reset.service';
+import { RegisterService } from './../user.service';
 import { ResetPassword } from './reset.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Component, OnInit } from '@angular/core';
@@ -16,7 +16,7 @@ export class ResetComponent implements OnInit {
   success: any
   error: any
 
-  constructor(private dataservice: ResetService,
+  constructor(private dataservice: RegisterService,
     private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {

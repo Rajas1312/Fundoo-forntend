@@ -1,6 +1,7 @@
 import { InterationService } from './../interation.service';
-import { DeletenoteService } from './../deletenote.service';
 import { Component, OnInit } from '@angular/core';
+import { GetnoteService } from '../getnote.service';
+
 
 @Component({
   selector: 'app-deletenote',
@@ -9,13 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeletenoteComponent implements OnInit {
 
-  constructor(private dataservice: DeletenoteService, private service: InterationService) { }
+  constructor(private service: InterationService, private service1: GetnoteService) { }
 
   ngOnInit(): void {
   }
 
   submit() {
-    this.dataservice.deleteNotes().subscribe(res => {
+    this.service1.deleteNotes().subscribe(res => {
       console.log(res)
       this.service.sendMessage("deleteNote")
       localStorage.removeItem('id')
