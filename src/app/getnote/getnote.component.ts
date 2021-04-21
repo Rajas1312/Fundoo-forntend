@@ -14,7 +14,6 @@ export class GetnoteComponent implements OnInit {
   public data: any
   arr: any
   id: any
-  @Input() name: any
 
   constructor(private dataservice: GetnoteService, private dilouge: MatDialog, private service: InterationService) {
     this.submit()

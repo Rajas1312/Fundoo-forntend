@@ -1,7 +1,9 @@
 
 import { Component, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
 import { GetnoteService } from '../notes.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -16,8 +18,9 @@ export class DashboardComponent implements OnInit {
   arr: any
   length: any
   trashClick = false
+  notesclick = false
 
-  constructor(private dataservice: GetnoteService) { }
+  constructor(private dataservice: GetnoteService, private route: Router, private activatedroute: ActivatedRoute) { }
 
   onToolBarToggle() {
     console.log(this.isMenuOpen)
@@ -46,6 +49,18 @@ export class DashboardComponent implements OnInit {
 
   onTrashClick() {
     this.trashClick = !this.trashClick
+    if (this.trashClick == true) {
+      this.route.navigate(['dashboard/trash']);
+      return this.trashClick = false
+    }
+  }
+
+  onNotesClick() {
+    this.notesclick = !this.notesclick
+    if (this.notesclick == true) {
+      this.route.navigate(['dashboard/notes']);
+      return this.notesclick = false
+    }
   }
 
 }

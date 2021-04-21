@@ -33,6 +33,7 @@ import { IconsComponent } from './icons/icons.component';
 import { UpdatenoteComponent } from './updatenote/updatenote.component';
 import { DeletenoteComponent } from './deletenote/deletenote.component';
 import { IsTrashComponent } from './is-trash/is-trash.component';
+import { DisplayComponent } from './display/display.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { IsTrashComponent } from './is-trash/is-trash.component';
     UpdatenoteComponent,
     DeletenoteComponent,
     IsTrashComponent,
+    DisplayComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,26 @@
-.trash{
+.card{
+    width: 240px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+}
+.title{
+    margin-top:2px ;
+    font:bolder;
+}
+.description{
+    margin-top:15px;
+    padding-bottom: 50px;
+}
+.main-box{
     display: flex;
-    justify-content: center;
-    align-self: center;
+    justify-content:flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.box{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

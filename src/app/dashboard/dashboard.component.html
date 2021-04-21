@@ -38,7 +38,7 @@
         opened>
         <div class="sidenav-icons">
             <button mat-icon-button class="menu-item">
-                <mat-icon fontSet="material-icons-outlined">lightbulb</mat-icon>
+                <mat-icon fontSet="material-icons-outlined" (click)="onNotesClick()">lightbulb</mat-icon>
                 Notes
             </button>
         </div>
@@ -71,15 +71,16 @@
 
     <mat-sidenav-content class="main-content" [ngStyle]="{ 'margin-left.px': contentMargin }">
 
-        <div *ngIf="trashClick==true;else Notes" [routerLink]="['/trash']">
+
+        <!-- <div class="main-addnote">
+            <app-addnote></app-addnote>
         </div>
-        <ng-template #Notes>
-            <div class="main-addnote">
-                <app-addnote></app-addnote>
-            </div>
-            <div class="main-getnote">
-                <app-getnote></app-getnote>
-            </div>
-        </ng-template>
+        <div class="main-getnote">
+            <app-getnote></app-getnote>
+        </div> -->
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+
     </mat-sidenav-content>
 </mat-sidenav-container>
