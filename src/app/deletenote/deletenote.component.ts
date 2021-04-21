@@ -22,7 +22,7 @@ export class DeletenoteComponent implements OnInit {
       this.service.sendMessage("deleteNote")
       localStorage.removeItem('id')
     }, err => {
-      console.log("err")
+      console.log(err)
     })
   }
 }

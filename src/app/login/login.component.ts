@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       this.data = res
       this.token = this.data.token
       localStorage.setItem('token', this.token)
-      this.router.navigate(['/dashboard'])
+      this.router.navigate(['/dashboard/notes'])
     }, error => {
       console.log(error)
       this._snackBar.open('invalid cerdentials!', '', {

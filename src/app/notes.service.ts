@@ -10,6 +10,15 @@ export class GetnoteService {
 
   constructor(private http: HttpClient) { }
 
+  deleteNotes() {
+    var reqHeader = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + localStorage.getItem('token')
+    });
+    console.log(localStorage.getItem('id'))
+    return this.http.put(this.URL + 'notes' + '/' + 'delete' + '/' + localStorage.getItem('id'), { headers: reqHeader })
+  }
+
   getNotes() {
     var reqHeader = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -32,11 +41,5 @@ export class GetnoteService {
     });
     return this.http.put(this.URL + 'notes' + '/' + localStorage.getItem('id'), data, { headers: reqHeader })
   }
-  deleteNotes() {
-    var reqHeader = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + localStorage.getItem('token')
-    });
-    return this.http.delete(this.URL + 'notes' + '/' + localStorage.getItem('id'), { headers: reqHeader })
-  }
+
 }

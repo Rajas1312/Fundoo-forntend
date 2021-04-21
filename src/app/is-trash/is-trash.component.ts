@@ -23,7 +23,6 @@ export class IsTrashComponent implements OnInit {
       this.arr = this.arr.reverse()
 
     })
-
   }
 
 }
