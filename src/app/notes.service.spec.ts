@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GetnoteService } from './getnote.service';
+import { GetnoteService } from './notes.service';
 
 describe('GetnoteService', () => {
   let service: GetnoteService;

@@ -1,7 +1,7 @@
-
 import { Note } from './../addnote/addnote.model';
 import { Component, OnInit } from '@angular/core';
-import { GetnoteService } from '../getnote.service';
+import { GetnoteService } from '../notes.service';
+
 
 @Component({
   selector: 'app-updatenote',

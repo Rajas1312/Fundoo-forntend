@@ -32,6 +32,7 @@ import { GetnoteComponent } from './getnote/getnote.component';
 import { IconsComponent } from './icons/icons.component';
 import { UpdatenoteComponent } from './updatenote/updatenote.component';
 import { DeletenoteComponent } from './deletenote/deletenote.component';
+import { IsTrashComponent } from './is-trash/is-trash.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { DeletenoteComponent } from './deletenote/deletenote.component';
     IconsComponent,
     UpdatenoteComponent,
     DeletenoteComponent,
+    IsTrashComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,17 +67,7 @@ import { DeletenoteComponent } from './deletenote/deletenote.component';
     MatSidenavModule,
     MatExpansionModule,
     MatMenuModule,
-    MatDialogModule,
-    RouterModule.forRoot([
-      {
-        path: '', component: RegistrationComponent
-      },
-      { path: 'login', component: LoginComponent },
-      { path: 'forgotpassword', component: ForgotpassordComponent },
-      { path: 'resetpassword/:token', component: ResetComponent },
-      { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
-
-    ])
+    MatDialogModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],

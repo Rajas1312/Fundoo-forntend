@@ -1,6 +1,7 @@
-import { GetnoteService } from '../getnote.service';
+
 import { Component, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { GetnoteService } from '../notes.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,6 +15,7 @@ export class DashboardComponent implements OnInit {
   data: any
   arr: any
   length: any
+  trashClick = false
 
   constructor(private dataservice: GetnoteService) { }
 
@@ -40,6 +42,10 @@ export class DashboardComponent implements OnInit {
 
     })
 
+  }
+
+  onTrashClick() {
+    this.trashClick = !this.trashClick
   }
 
 }

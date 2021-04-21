@@ -1,6 +1,7 @@
 import { InterationService } from './../interation.service';
 import { Component, OnInit } from '@angular/core';
-import { GetnoteService } from '../getnote.service';
+import { GetnoteService } from '../notes.service';
+
 
 
 @Component({

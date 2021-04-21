@@ -2,7 +2,8 @@ import { InterationService } from './../interation.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit, Input } from '@angular/core';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
-import { GetnoteService } from '../getnote.service';
+import { GetnoteService } from '../notes.service';
+
 
 @Component({
   selector: 'app-getnote',
