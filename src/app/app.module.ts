@@ -34,6 +34,7 @@ import { UpdatenoteComponent } from './updatenote/updatenote.component';
 import { DeletenoteComponent } from './deletenote/deletenote.component';
 import { IsTrashComponent } from './is-trash/is-trash.component';
 import { DisplayComponent } from './display/display.component';
+import { IsArchivedComponent } from './is-archived/is-archived.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { DisplayComponent } from './display/display.component';
     DeletenoteComponent,
     IsTrashComponent,
     DisplayComponent,
+    IsArchivedComponent,
   ],
   imports: [
     BrowserModule,

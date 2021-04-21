@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
   length: any
   trashClick = false
   notesclick = false
+  archiveClick = false
 
   constructor(private dataservice: GetnoteService, private route: Router, private activatedroute: ActivatedRoute) { }
 
@@ -63,4 +64,11 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  onArchiveClick() {
+    this.archiveClick = !this.archiveClick
+    if (this.archiveClick == true) {
+      this.route.navigate(['dashboard/archive']);
+      return this.archiveClick = false
+    }
+  }
 }

@@ -9,6 +9,7 @@ import { ResetComponent } from './reset/reset.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { IsTrashComponent } from './is-trash/is-trash.component';
 import { AuthGuard } from './auth-guard.service';
+import { IsArchivedComponent } from './is-archived/is-archived.component';
 
 const appRoutes: Routes = [
   {
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], children: [
       { path: 'trash', component: IsTrashComponent },
-      { path: 'notes', component: DisplayComponent }
+      { path: 'notes', component: DisplayComponent },
+      { path: 'archive', component: IsArchivedComponent }
     ]
   },
 ]
