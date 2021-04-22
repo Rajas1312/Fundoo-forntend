@@ -1,6 +1,8 @@
+import { CollaboratorComponent } from './../collaborator/collaborator.component';
 import { InterationService } from './../interation.service';
 import { Component, OnInit } from '@angular/core';
 import { GetnoteService } from '../notes.service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-icons',
@@ -9,7 +11,7 @@ import { GetnoteService } from '../notes.service';
 })
 export class IconsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dilouge: MatDialog) { }
 
   ngOnInit(): void {
   }

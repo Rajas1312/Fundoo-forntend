@@ -9,6 +9,13 @@
                 <div class="description">
                     {{array.description}}
                 </div>
+                <div class="description">
+                    <ng-container *ngIf="array.collaborator.length">
+                        <button mat-button>
+                            <mat-icon fontSet="material-icons-outlined"> account_circle</mat-icon>
+                        </button>
+                    </ng-container>
+                </div>
                 <div>
                     <button mat-icon-button>
                         <mat-icon fontSet="material-icons-outlined">delete</mat-icon>

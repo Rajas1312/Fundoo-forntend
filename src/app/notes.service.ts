@@ -51,4 +51,12 @@ export class GetnoteService {
     return this.http.put(this.URL + 'notes' + '/' + 'archive' + '/' + localStorage.getItem('id'), { headers: reqHeader })
   }
 
+  collaboratorNotes(data) {
+    var reqHeader = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + localStorage.getItem('token')
+    });
+    return this.http.put(this.URL + 'addcollaborator' + '/' + localStorage.getItem('id'), data, { headers: reqHeader })
+  }
+
 }

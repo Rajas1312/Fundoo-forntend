@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit, Input } from '@angular/core';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 import { GetnoteService } from '../notes.service';
+import { CollaboratorComponent } from '../collaborator/collaborator.component';
 
 
 @Component({
@@ -57,6 +58,17 @@ export class GetnoteComponent implements OnInit {
   }
   deleteNote() {
     this.service.add$.subscribe(message => {
+      this.submit()
+    })
+  }
+
+  onClick1() {
+    let dilougeRef = this.dilouge.open(CollaboratorComponent, {
+      height: '170px',
+      width: '400px'
+    })
+    dilougeRef.afterClosed().subscribe(res => {
+      console.log(res)
       this.submit()
     })
   }

@@ -1,0 +1,15 @@
+.main-box{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.input{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}

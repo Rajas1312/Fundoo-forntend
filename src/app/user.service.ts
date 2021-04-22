@@ -15,6 +15,7 @@ export class RegisterService {
   }
   loginUser(data) {
     this.data1 = data
+    localStorage.setItem('email', this.data1.email)
     return this.http.post(environment.baseURL + 'login', data)
   }
   loggedIn() {

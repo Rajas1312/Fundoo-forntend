@@ -2,6 +2,9 @@
     width: 240px;
     margin-right: 20px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     
 }
 .title{
@@ -10,7 +13,7 @@
 }
 .description{
     margin-top:15px;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
 }
 .main-box{
     padding-left: 100px;

@@ -36,6 +36,7 @@ import { IsTrashComponent } from './is-trash/is-trash.component';
 import { DisplayComponent } from './display/display.component';
 import { IsArchivedComponent } from './is-archived/is-archived.component';
 import { ArchivenoteComponent } from './archivenote/archivenote.component';
+import { CollaboratorComponent } from './collaborator/collaborator.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { ArchivenoteComponent } from './archivenote/archivenote.component';
     DisplayComponent,
     IsArchivedComponent,
     ArchivenoteComponent,
+    CollaboratorComponent,
   ],
   imports: [
     BrowserModule,
