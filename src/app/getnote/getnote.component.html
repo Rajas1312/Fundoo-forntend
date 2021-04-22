@@ -2,12 +2,18 @@
     <div class="box" *ngFor="let array of arr">
         <ng-container *ngIf="array.isDeleted==false && array.isArchived==false">
             <mat-card class="card">
-
                 <div class="title" (click)="onClick(array._id)">
                     {{array.title}}
                 </div>
                 <div class="description">
                     {{array.description}}
+                </div>
+                <div class="description">
+                    <ng-container *ngIf="array.collaborator.length">
+                        <button mat-button>
+                            <mat-icon fontSet="material-icons-outlined"> account_circle</mat-icon>
+                        </button>
+                    </ng-container>
                 </div>
                 <div (click)="onDeleteClick(array._id)">
                     <app-icons></app-icons>

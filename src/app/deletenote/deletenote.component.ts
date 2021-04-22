@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { InterationService } from './../interation.service';
 import { Component, OnInit } from '@angular/core';
 import { GetnoteService } from '../notes.service';
@@ -7,11 +8,11 @@ import { GetnoteService } from '../notes.service';
 @Component({
   selector: 'app-deletenote',
   templateUrl: './deletenote.component.html',
-  styleUrls: ['./deletenote.component.css']
+  styleUrls: ['./deletenote.component.scss']
 })
 export class DeletenoteComponent implements OnInit {
 
-  constructor(private service: InterationService, private service1: GetnoteService) { }
+  constructor(private service: InterationService, private service1: GetnoteService, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +20,9 @@ export class DeletenoteComponent implements OnInit {
   submit() {
     this.service1.deleteNotes().subscribe(res => {
       console.log(res)
+      this._snackBar.open('Note Deleted Sucessfully', '', {
+        duration: 2000
+      })
       this.service.sendMessage("deleteNote")
       localStorage.removeItem('id')
     }, err => {

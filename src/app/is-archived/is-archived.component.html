@@ -9,8 +9,10 @@
                 <div class="description">
                     {{array.description}}
                 </div>
-                <div (click)="onDeleteClick(array._id)">
-                    <app-icons></app-icons>
+                <div>
+                    <button mat-icon-button>
+                        <mat-icon fontSet="material-icons-outlined">unarchive</mat-icon>
+                    </button>
                 </div>
             </mat-card>
         </ng-container>

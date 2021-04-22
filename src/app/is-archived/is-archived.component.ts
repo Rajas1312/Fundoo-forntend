@@ -4,7 +4,7 @@ import { GetnoteService } from '../notes.service';
 @Component({
   selector: 'app-is-archived',
   templateUrl: './is-archived.component.html',
-  styleUrls: ['./is-archived.component.css']
+  styleUrls: ['./is-archived.component.scss']
 })
 export class IsArchivedComponent implements OnInit {
 

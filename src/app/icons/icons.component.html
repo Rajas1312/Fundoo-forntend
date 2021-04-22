@@ -10,7 +10,12 @@
 <button mat-icon-button>
     <mat-icon fontSet="material-icons-outlined">image</mat-icon>
 </button>
-<button mat-icon-button>
+<button mat-icon-button [matMenuTriggerFor]="menu1">
+    <mat-menu #menu1="matMenu">
+        <button mat-menu-item>
+            <app-archivenote></app-archivenote>
+        </button>
+    </mat-menu>
     <mat-icon fontSet="material-icons-outlined">archive</mat-icon>
 </button>
 <button mat-icon-button [matMenuTriggerFor]="menu">
