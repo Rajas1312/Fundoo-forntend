@@ -24,7 +24,6 @@ export class DashboardComponent implements OnInit {
   constructor(private dataservice: GetnoteService, private route: Router, private activatedroute: ActivatedRoute) { }
 
   onToolBarToggle() {
-    console.log(this.isMenuOpen)
     this.isMenuOpen = !this.isMenuOpen
     if (!this.isMenuOpen) {
       this.contentMargin = 50;

@@ -1,8 +1,8 @@
-
 import { InterationService } from './../interation.service';
 import { Note } from './addnote.model';
 import { Component, OnInit } from '@angular/core';
 import { GetnoteService } from '../notes.service';
+import { FormsModule } from '@angular/forms'
 
 
 @Component({
@@ -20,7 +20,7 @@ export class AddnoteComponent implements OnInit {
 
   }
   onCloseClick() {
-    this.panelOpenState = !this.panelOpenState
+    return this.panelOpenState = !this.panelOpenState
 
   }
 

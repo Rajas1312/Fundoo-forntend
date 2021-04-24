@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
 import { UpdatenoteComponent } from './updatenote.component';
 
 describe('UpdatenoteComponent', () => {
@@ -8,9 +8,10 @@ describe('UpdatenoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UpdatenoteComponent ]
+      declarations: [UpdatenoteComponent],
+      imports: [HttpClientTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

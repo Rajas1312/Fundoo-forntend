@@ -56,6 +56,7 @@ export class GetnoteService {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('token')
     });
+    localStorage.setItem('collaborator', data.collaboratorId[0])
     return this.http.put(this.URL + 'addcollaborator' + '/' + localStorage.getItem('id'), data, { headers: reqHeader })
   }
 

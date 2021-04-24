@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule } from '@angular/forms';
 import { AddnoteComponent } from './addnote.component';
+import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 
 describe('AddnoteComponent', () => {
   let component: AddnoteComponent;
@@ -8,9 +10,10 @@ describe('AddnoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddnoteComponent ]
+      declarations: [AddnoteComponent],
+      imports: [HttpClientTestingModule, FormsModule]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +25,9 @@ describe('AddnoteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('givenTheFunction_whenClicked_ShouldReturnTrue', () => {
+    component.onCloseClick()
+    expect(component.panelOpenState).toBeTrue()
+  })
 });

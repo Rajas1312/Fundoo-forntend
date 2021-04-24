@@ -6,8 +6,8 @@
         <mat-expansion-panel-header>
             <mat-panel-title>
                 <form #addform="ngForm" (ngSubmit)="submit();addform.reset()">
-                    <textarea class="title" matInput placeholder="Title" autocomplete="off" cdkTextareaAutosize
-                        #autosize="cdkTextareaAutosize" [(ngModel)]="notes.title" name="first"></textarea>
+                    <textarea class="title" matInput placeholder="Title" autocomplete="off" [(ngModel)]="notes.title"
+                        name="first"></textarea>
                 </form>
             </mat-panel-title>
         </mat-expansion-panel-header>
