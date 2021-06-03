@@ -32,7 +32,6 @@ export class GetnoteComponent implements OnInit {
       this.arr = this.arr.reverse()
 
     })
-
   }
 
   onClick(data) {

@@ -1,5 +1,6 @@
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
 import { RegistrationComponent } from './registration.component';
 
 describe('RegistrationComponent', () => {
@@ -8,7 +9,8 @@ describe('RegistrationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [RegistrationComponent]
+      declarations: [RegistrationComponent],
+      imports: [HttpClientTestingModule, MatSnackBarModule]
     })
       .compileComponents();
   });
@@ -19,7 +21,7 @@ describe('RegistrationComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

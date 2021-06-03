@@ -29,22 +29,22 @@ describe('DashboardComponent', () => {
   });
   it('givenTheFunction_whenClicked_ShouldReturnTrue', () => {
     component.onToolBarToggle()
-    expect(component.isMenuOpen).toBeTrue()
+    expect(component.isMenuOpen).toBeTruthy()
   })
 
-  it('givenTheFunction_whenClicked_ShouldReturnTrue', () => {
+  it('givenTheArchive_whenClicked_ShouldReturnTrue', () => {
     component.onArchiveClick();
-    expect(component.archiveClick).toBeTruthy
+    expect(component.archiveClick).toBeFalse()
   })
 
-  it('givenTheFunction_whenClicked_ShouldReturnTrue', () => {
+  it('givenThetrashClick_whenClicked_ShouldReturnTrue', () => {
     component.onTrashClick();
-    expect(component.trashClick).toBeTruthy
+    expect(component.trashClick).toBeFalse()
   })
 
-  it('givenTheFunction_whenClicked_ShouldReturnTrue', () => {
+  it('givenTheNotesClick_whenClicked_ShouldReturnTrue', () => {
     component.onNotesClick()
-    expect(component.notesclick).toBeTruthy
+    expect(component.notesclick).toBeFalse()
   })
 
 });
